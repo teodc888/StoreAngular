@@ -1,0 +1,10 @@
+<section class="products">
+  <!-- paso de data de un componente padre a un componente hijo -->
+  <app-product
+
+    (addToCartClick)="addToCart($event)"
+
+    [product]="product"
+    *ngFor="let product of products"
+  ></app-product>
+</section>
