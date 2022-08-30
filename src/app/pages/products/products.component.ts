@@ -23,7 +23,6 @@ export class ProductsComponent implements OnInit {
   }
 
   addToCart(product: Product):void{
-    console.log("add to cart", product)
     this.shoppingCartSvc.updateCart(product);
   }
 }
