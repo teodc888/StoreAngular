@@ -4,17 +4,14 @@ import { Observable } from 'rxjs';
 import { Product } from '../interface/product.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProductsService {
+  private apiUrl = 'http://localhost:3010/products';
 
-  private apiUrl = "http://localhost:3010/products";
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  getProducts(): Observable<any>{
+  getProducts(): Observable<any> {
     return this.http.get<Product[]>(this.apiUrl);
   }
-
-
 }

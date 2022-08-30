@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-  <span>My Application</span>
-  {{quantity$ | async | json}} - quantity
-  {{total$ | async | json}} - total
+  <a [routerLink]="['/']"> <span>My Store</span></a>
+  <samp class="spacer"></samp>
+  <app-cart class="mouseHover" (click)="goToCheckout()"></app-cart>
 </mat-toolbar>
